@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    tools:context=".Upload">
+    <HorizontalScrollView
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/select"
+        android:background="@color/colorPrimaryTrans"
+        >
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/img_list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            ></LinearLayout>
+
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/remove"
+        android:background="@color/colorPrimaryTrans"
+        android:text="No photos selected!"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/select"
+        android:scrollbarThumbHorizontal="@color/colorPrimary"
+
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/select"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/upload"
+        android:text="Select"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Upload"
+        app:layout_constraintLeft_toRightOf="@id/select"
+        android:id="@+id/upload"
+        />
+</android.support.constraint.ConstraintLayout>
